@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Series</th>
+        <th scope="col">ManufactureYear</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car:${carstable}">
+        <td th:text="${car.model}"/>
+        <td th:text="${car.series}"/>
+        <td th:text="${car.manufactureYear}"/>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
